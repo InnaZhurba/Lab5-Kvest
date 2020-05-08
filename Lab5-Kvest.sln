@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL-Kvest", "DAL-Kvest\DAL-Kvest.csproj", "{F9095EFC-57E8-4054-91AC-0570F5089133}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL-Kvest", "BLL-Kvest\BLL-Kvest.csproj", "{4F036440-FD4C-4976-8992-A7C2F7459D42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI-Kvest", "UI-Kvest\UI-Kvest.csproj", "{EB34CF38-DD98-4E64-8944-5AB4D67B5A4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9095EFC-57E8-4054-91AC-0570F5089133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9095EFC-57E8-4054-91AC-0570F5089133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9095EFC-57E8-4054-91AC-0570F5089133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9095EFC-57E8-4054-91AC-0570F5089133}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F036440-FD4C-4976-8992-A7C2F7459D42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F036440-FD4C-4976-8992-A7C2F7459D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F036440-FD4C-4976-8992-A7C2F7459D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F036440-FD4C-4976-8992-A7C2F7459D42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB34CF38-DD98-4E64-8944-5AB4D67B5A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB34CF38-DD98-4E64-8944-5AB4D67B5A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB34CF38-DD98-4E64-8944-5AB4D67B5A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB34CF38-DD98-4E64-8944-5AB4D67B5A4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {743A774E-9D46-4B8B-827B-DCB42919C9BC}
+	EndGlobalSection
+EndGlobal
