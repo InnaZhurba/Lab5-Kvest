@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL_Kvest
+namespace DAL_Kvest.Entities
 {
     public class Sertificate
     {
@@ -12,6 +12,6 @@ namespace DAL_Kvest
         public int SertificateNumber { get; set; }
         public Boolean Shown { get; set; }
 
-        public virtual Order Order { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

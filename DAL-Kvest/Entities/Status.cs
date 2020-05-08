@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL_Kvest
+namespace DAL_Kvest.Entities
 {
     public class Status
     {
@@ -14,8 +14,8 @@ namespace DAL_Kvest
         public int KvestRoomId { get; set; }
         public int OrderId { get; set; }
 
-        public virtual ICollection<TimeCategory> TimeCategories { get; set; }
-        public virtual ICollection<KvestRoom> KvestRooms { get; set; }
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual TimeCategory TimeCategory { get; set; }
+        public virtual KvestRoom KvestRoom { get; set; }
+        public virtual Order Order { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL_Kvest
+namespace DAL_Kvest.Entities
 {
     public class Order
     {
@@ -14,7 +14,7 @@ namespace DAL_Kvest
         public int SertificateId { get; set; }
         public int NumberOfUsers { get; set; }
 
-        public virtual ICollection<Sertificate> Sertificate { get; set; }
-        public virtual Status Status { get; set; }
+        public virtual Sertificate Sertificate { get; set; }
+        public virtual ICollection<Status> Statuses { get; set; }
     }
 }

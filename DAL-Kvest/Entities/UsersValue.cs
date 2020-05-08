@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL_Kvest
+namespace DAL_Kvest.Entities
 {
     public class UsersValue
     {
@@ -12,6 +12,6 @@ namespace DAL_Kvest
         public int min { get; set; }
         public int max { get; set; }
 
-        public virtual KvestRoom KvestRoom { get; set; }
+        public virtual ICollection<KvestRoom> KvestRooms { get; set; }
     }
 }

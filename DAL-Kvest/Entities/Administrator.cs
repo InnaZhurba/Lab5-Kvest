@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL_Kvest
+namespace DAL_Kvest.Entities
 {
     public class Administrator
     {

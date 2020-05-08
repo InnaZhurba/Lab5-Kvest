@@ -51,19 +51,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddData.cs" />
     <Compile Include="Entities\Administrator.cs" />
     <Compile Include="Entities\AgeCategory.cs" />
-    <Compile Include="CheckData.cs" />
-    <Compile Include="DeleteData.cs" />
-    <Compile Include="FindData.cs" />
     <Compile Include="Entities\KvestRoom.cs" />
+    <Compile Include="Migrations\202005080951416_InitialCreate.cs" />
+    <Compile Include="Migrations\202005080951416_InitialCreate.designer.cs">
+      <DependentUpon>202005080951416_InitialCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EF\BDContext.cs" />
     <Compile Include="Entities\Sertificate.cs" />
-    <Compile Include="ShowData.cs" />
     <Compile Include="Entities\Status.cs" />
     <Compile Include="Entities\TimeCategory.cs" />
     <Compile Include="Entities\UsersValue.cs" />
@@ -77,6 +76,11 @@
   <ItemGroup>
     <Folder Include="Repositories\" />
     <Folder Include="UoW\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202005080951416_InitialCreate.resx">
+      <DependentUpon>202005080951416_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -4,8 +4,9 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL_Kvest.Entities;
 
-namespace DAL_Kvest
+namespace DAL_Kvest.EF
 {
     class BDContext : DbContext
     {

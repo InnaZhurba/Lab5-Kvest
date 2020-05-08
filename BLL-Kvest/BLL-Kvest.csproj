@@ -57,9 +57,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{86dcd2c0-1d0b-44af-b741-ce1e311be88c}</Project>
-      <Name>DAL</Name>
+    <ProjectReference Include="..\DAL-Kvest\DAL-Kvest.csproj">
+      <Project>{f9095efc-57e8-4054-91ac-0570f5089133}</Project>
+      <Name>DAL-Kvest</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
