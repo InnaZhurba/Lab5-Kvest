@@ -54,6 +54,8 @@
     <Compile Include="Entities\Administrator.cs" />
     <Compile Include="Entities\AgeCategory.cs" />
     <Compile Include="Entities\KvestRoom.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
+    <Compile Include="Interfaces\Repository.cs" />
     <Compile Include="Migrations\202005080951416_InitialCreate.cs" />
     <Compile Include="Migrations\202005080951416_InitialCreate.designer.cs">
       <DependentUpon>202005080951416_InitialCreate.cs</DependentUpon>
@@ -66,6 +68,15 @@
     <Compile Include="Entities\Status.cs" />
     <Compile Include="Entities\TimeCategory.cs" />
     <Compile Include="Entities\UsersValue.cs" />
+    <Compile Include="Repositories\AdministratorRepository.cs" />
+    <Compile Include="Repositories\AgeCategoryRepository.cs" />
+    <Compile Include="Repositories\KvestRoomRepository.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
+    <Compile Include="Repositories\SertificateRepository.cs" />
+    <Compile Include="Repositories\StatusRepository.cs" />
+    <Compile Include="Repositories\TimeCategoryRepository.cs" />
+    <Compile Include="Repositories\UsersValueRepository.cs" />
+    <Compile Include="UoW\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -73,10 +84,7 @@
     <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-    <Folder Include="UoW\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202005080951416_InitialCreate.resx">
       <DependentUpon>202005080951416_InitialCreate.cs</DependentUpon>

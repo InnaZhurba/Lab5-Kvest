@@ -8,7 +8,7 @@ using DAL_Kvest.Entities;
 
 namespace DAL_Kvest.EF
 {
-    class BDContext : DbContext
+    public class BDContext : DbContext
     {
         public BDContext()
             : base("DbConnection")
