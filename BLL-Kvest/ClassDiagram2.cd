@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BLL_Kvest.DTO.AdministratorDTO" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>DTO\AdministratorDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL_Kvest.DTO.AgeCategoryDTO" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\AgeCategoryDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL_Kvest.DTO.KvestRoomDTO" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAABAAAAAEIAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\KvestRoomDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL_Kvest.DTO.OrderDTO" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAEAAAAAAAAAAAAAAAAAQAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>DTO\OrderDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL_Kvest.DTO.SertificateDTO" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\SertificateDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL_Kvest.DTO.StatusDTO" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAQAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\StatusDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL_Kvest.DTO.TimeCategoryDTO" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>DTO\TimeCategoryDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL_Kvest.DTO.UsersValueDTO" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\UsersValueDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL_Kvest.Infostructure.ServiceModule">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infostructure\ServiceModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL_Kvest.Infostructure.ValidationException">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Infostructure\ValidationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL_Kvest.Program" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL_Kvest.Services.KvestRoomService" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAGAAEAAAAAAAAAAAAAAAAAAAEAAQEACAACA=</HashCode>
+      <FileName>Services\KvestRoomService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BLL_Kvest.Services.StatusService" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAQAAAGAAAAAAAAAAAAAEDAAAAAAAAIQAAAAAAAA=</HashCode>
+      <FileName>Services\StatusService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="BLL_Kvest.Interfaces.IKvestRoomService">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAEAAAAAAAAAAAAAAAAAAAEAAQEACAACA=</HashCode>
+      <FileName>Interfaces\IKvestRoom.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BLL_Kvest.Interfaces.IStatusService">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAQAAACAAAAAAAAAAAAAEDAAAAAAAAIQAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IStatus.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

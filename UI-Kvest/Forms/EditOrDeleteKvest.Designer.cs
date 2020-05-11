@@ -11,14 +11,14 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing && (components != null))
+        //    {
+        //        components.Dispose();
+        //    }
+        //    base.Dispose(disposing);
+        //}
 
         #region Windows Form Designer generated code
 
@@ -40,7 +40,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+            //this.SuspendLayout();
             // 
             // listBox1
             // 
@@ -51,7 +51,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(1104, 748);
             this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            //this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -79,7 +79,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Cansel";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+           // this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label4
             // 
@@ -127,7 +127,7 @@
             this.label2.Size = new System.Drawing.Size(373, 39);
             this.label2.TabIndex = 11;
             this.label2.Text = "Number of participants:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBox1
             // 
@@ -158,28 +158,28 @@
             // 
             // EditOrDeleteKvest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(2298, 789);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox1);
-            this.Name = "EditOrDeleteKvest";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EditOrDeleteKvest";
-            this.Load += new System.EventHandler(this.EditOrDeleteKvest_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            //this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            //this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            //this.ClientSize = new System.Drawing.Size(2298, 789);
+            //this.Controls.Add(this.label4);
+            //this.Controls.Add(this.textBox2);
+            //this.Controls.Add(this.comboBox2);
+            //this.Controls.Add(this.label3);
+            //this.Controls.Add(this.label2);
+            //this.Controls.Add(this.comboBox1);
+            //this.Controls.Add(this.label1);
+            //this.Controls.Add(this.textBox1);
+            //this.Controls.Add(this.button3);
+            //this.Controls.Add(this.button2);
+            //this.Controls.Add(this.button1);
+            //this.Controls.Add(this.listBox1);
+            //this.Name = "EditOrDeleteKvest";
+            //this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            //this.Text = "EditOrDeleteKvest";
+            //this.Load += new System.EventHandler(this.EditOrDeleteKvest_Load);
+            //this.ResumeLayout(false);
+            //this.PerformLayout();
 
         }
 

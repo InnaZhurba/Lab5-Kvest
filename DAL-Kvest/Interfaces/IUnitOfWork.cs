@@ -15,6 +15,8 @@ namespace DAL_Kvest.Interfaces
         IRepository<Order> Orders { get; }
         IRepository<Sertificate> Sertificates { get; }
         IRepository<Status> Statuses { get; }
+        IRepository<TimeCategory> TimeCategories { get; }
+        IRepository<UsersValue> UsersValues { get; }
         void Save();
         void Dispose();
     }

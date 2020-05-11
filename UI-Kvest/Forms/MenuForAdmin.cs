@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL_Kvest.Interfaces;
+using BLL_Kvest.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +14,10 @@ namespace UI_Kvest
 {
     public partial class MenuForAdmin : Form
     {
-        public MenuForAdmin()
+        IKvestRoomService serv;
+        public MenuForAdmin(IKvestRoomService s)
         {
+            serv = s;
             InitializeComponent();
         }
 
@@ -29,7 +33,8 @@ namespace UI_Kvest
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddKvestRoom add = new AddKvestRoom();
+           
+            AddKvestRoom add = new AddKvestRoom(serv);
             add.Show();
             this.Close();
         }
@@ -37,14 +42,14 @@ namespace UI_Kvest
         private void button3_Click(object sender, EventArgs e)
         {
             EditOrDeleteKvest add = new EditOrDeleteKvest();
-            add.Show();
+            //add.Show();
             this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            BLL.Program prog = new BLL.Program();
-            prog.AddSertificate();
+            //BLL.Program prog = new BLL.Program();
+            //prog.AddSertificate();
             MessageBox.Show("Succesful!");
         }
     }

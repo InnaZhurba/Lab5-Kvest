@@ -1,4 +1,8 @@
-﻿using System;
+﻿using AutoMapper;
+using BLL_Kvest.DTO;
+using BLL_Kvest.Interfaces;
+using BLL_Kvest.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,17 +11,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
+using UI_Kvest.Entities;
 
 namespace UI_Kvest
 {
     public partial class AddKvestRoom : Form
     {
-        BLL.Program prog = new BLL.Program();
+        IKvestRoomService kvestService;
         int ageCategory;
         int usersValue;
-        public AddKvestRoom()
+        public AddKvestRoom( IKvestRoomService serv)
         {
+            kvestService = serv;
+
             InitializeComponent();
             AddComboUsersValues();
             AddComboAgeCategories();
@@ -25,15 +31,25 @@ namespace UI_Kvest
         }
         void AddComboUsersValues()
         {
-            int[,] usersVal = prog.UsersValueShow();
-            for (int i = 0; i < 3; i++)
-                comboBox1.Items.Add(usersVal[i, 0] + "-" + usersVal[i, 1]);
+            
+            IEnumerable<UsersValueDTO> usersVal = kvestService.GetUsersValues();
+
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<UsersValueDTO, UsersValue>()).CreateMapper();
+            IEnumerable<UsersValue> val = mapper.Map<IEnumerable<UsersValueDTO>, List<UsersValue>>(usersVal);
+
+
+            foreach(UsersValue c in val)
+                comboBox1.Items.Add(c.min + "-" + c.max);
         }
         void AddComboAgeCategories()
         {
-            int[,] value = prog.AgeCategoriesShow();
-            for (int i = 0; i < 3; i++)
-                comboBox2.Items.Add(value[i, 0] + "-" + value[i, 1]);
+            IEnumerable<AgeCategoryDTO> usersVal = kvestService.GetAgeCategories();
+
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<AgeCategoryDTO, AgeCategory>()).CreateMapper();
+            IEnumerable<AgeCategory> val = mapper.Map<IEnumerable<AgeCategoryDTO>, List<AgeCategory>>(usersVal);
+
+            foreach (AgeCategory c in val)
+                comboBox2.Items.Add(c.min + "-" + c.max);
         }
         void CleanItems()
         {
@@ -45,13 +61,18 @@ namespace UI_Kvest
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             if (textBox1.Text.Length > 0 && textBox2.Text.Length > 0)
             {
-                if (prog.AddKvestRoom(textBox1.Text, usersValue, ageCategory, Convert.ToInt32(textBox2.Text)))
-                {
+                var mapper = new MapperConfiguration(cfg => cfg.CreateMap<KvestRoom, KvestRoomDTO>()).CreateMapper();
+                KvestRoomDTO kvest = mapper.Map<KvestRoom,KvestRoomDTO>(new KvestRoom { Name = textBox1.Text , UsersValueId = usersValue, AgeCategoryId = ageCategory, PriceForOneUser = Convert.ToInt32(textBox2.Text) });
+
+                kvestService.MakeKvest(kvest);
+                //if (prog.AddKvestRoom(textBox1.Text, usersValue, ageCategory, Convert.ToInt32(textBox2.Text)))
+                //{
                     MessageBox.Show("Kvest-room was added succesfully!!!");
                     CleanItems();
-                }
+                //}
             }
             else
                 MessageBox.Show("You shoud edit all rows. Try again!");
@@ -69,7 +90,7 @@ namespace UI_Kvest
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuForAdmin m = new MenuForAdmin();
+            MenuForAdmin m = new MenuForAdmin(kvestService);
             m.Show();
             this.Close();
         }

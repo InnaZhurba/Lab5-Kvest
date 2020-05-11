@@ -7,15 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
+using BLL_Kvest;
+using BLL_Kvest.Interfaces;
 
 namespace UI_Kvest
 {
     public partial class Main : Form
     {
-        BLL.Program prog = new BLL.Program();
-        public Main()
+        IKvestRoomService serv;
+        public Main(IKvestRoomService s)
         {
+            serv = s;
             InitializeComponent();
         }
 
@@ -49,24 +51,24 @@ namespace UI_Kvest
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
-            {
-                if (textBox1.Text.Length > 0 && textBox2.Text.Length > 0)
-                    if (prog.CheckAdmin(textBox1.Text, Convert.ToInt32(textBox2.Text)))
-                    {
-                        MenuForAdmin m = new MenuForAdmin();
+           // if (checkBox1.Checked)
+            //{
+            //    if (textBox1.Text.Length > 0 && textBox2.Text.Length > 0)
+            //        if (prog.CheckAdmin(textBox1.Text, Convert.ToInt32(textBox2.Text)))
+            //        {
+                        MenuForAdmin m = new MenuForAdmin(serv);
                         m.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Wrong data!!!");
-                    }
-            }
-            else
-            {
-                MenuForUsers m = new MenuForUsers();
-                m.Show();
-            }
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Wrong data!!!");
+            //        }
+            ////}
+            //else
+            //{
+            //    MenuForUsers m = new MenuForUsers();
+            //    m.Show();
+            //}
         }
     }
 }
