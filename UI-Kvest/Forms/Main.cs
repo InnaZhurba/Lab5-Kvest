@@ -14,10 +14,10 @@ namespace UI_Kvest
 {
     public partial class Main : Form
     {
-        IKvestRoomService serv;
-        public Main(IKvestRoomService s)
+       // IKvestRoomService serv;
+        public Main()//(IKvestRoomService s)
         {
-            serv = s;
+      //      serv = s;
             InitializeComponent();
         }
 
@@ -56,8 +56,8 @@ namespace UI_Kvest
             //    if (textBox1.Text.Length > 0 && textBox2.Text.Length > 0)
             //        if (prog.CheckAdmin(textBox1.Text, Convert.ToInt32(textBox2.Text)))
             //        {
-                        MenuForAdmin m = new MenuForAdmin(serv);
-                        m.Show();
+                            ///MenuForAdmin m = new MenuForAdmin(serv);
+                       /// m.Show();
             //        }
             //        else
             //        {
