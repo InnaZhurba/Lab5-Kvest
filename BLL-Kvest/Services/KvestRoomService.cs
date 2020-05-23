@@ -33,6 +33,7 @@ namespace BLL_Kvest.Services
                 Name = data.Name,
                 UsersValueId = dalDataVal.ID,
                 AgeCategoryId = dalDataAge.Id,
+                PriceForOneUser = data.PriceForOneUser,
             };
             Database.KvestRooms.Create(DATA);
             Database.Save();
@@ -40,7 +41,8 @@ namespace BLL_Kvest.Services
         public IEnumerable<KvestRoomDTO> GetKvests()
         {
             var mapper = new MapperConfiguration(cfg => cfg.CreateMap<KvestRoom, KvestRoomDTO>()).CreateMapper();
-            return mapper.Map<IEnumerable<KvestRoom>, List<KvestRoomDTO>>(Database.KvestRooms.GetAll());
+            IEnumerable<KvestRoomDTO> data = mapper.Map<IEnumerable<KvestRoom>, List<KvestRoomDTO>>(Database.KvestRooms.GetAll());
+            return data;
         }
 
         public IEnumerable<AgeCategoryDTO> GetAgeCategories()
